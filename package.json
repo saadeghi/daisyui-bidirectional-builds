@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "daisy": "tailwindcss -c tailwind-daisy.config.js -o public/daisy.css",
+    "tailwind": "tailwindcss -o public/tailwind.css",
+    "build": "npm run daisy && npm run tailwind"
+  },
+  "devDependencies": {
+    "daisyui": "latest",
+    "tailwindcss": "latest"
+  }
+}
