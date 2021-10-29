@@ -1,11 +1,14 @@
 {
   "scripts": {
-    "daisy": "tailwindcss -c tailwind-daisy.config.js -o public/daisy.css",
-    "tailwind": "tailwindcss -o public/tailwind.css",
-    "build": "npm run daisy && npm run tailwind"
+    "tailwind-ltr": "tailwindcss -o public/ltr.css",
+    "tailwind-rtl": "tailwindcss -c tailwind.rtl.config.js -o public/rtl.css",
+    "build": "npm run tailwind-ltr && npm run tailwind-rtl"
   },
   "devDependencies": {
     "daisyui": "latest",
     "tailwindcss": "latest"
+  },
+  "dependencies": {
+    "tailwindcss-flip": "^1.0.0"
   }
 }

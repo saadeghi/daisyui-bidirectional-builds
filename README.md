@@ -1,4 +1,4 @@
-Dual tailwind builds so we can have prefixes only for daisyUI
+Dual tailwind builds for RTL and LTR
 
 ---
 

@@ -1,11 +1,11 @@
 module.exports = {
-  prefix: 'daisy-',
   mode: 'jit',
   purge: ['./public/**/*.html'],
   plugins: [
-    require('daisyui')
+    require('daisyui'),
+    require("tailwindcss-flip")
   ],
-  corePlugins: {
-    preflight: false,
+  daisyui: {
+    rtl: true
   }
 }

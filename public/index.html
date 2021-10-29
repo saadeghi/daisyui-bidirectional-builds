@@ -1,18 +1,25 @@
-<html>
-  <link rel="stylesheet" type="text/css" href="daisy.css" />
-  <link rel="stylesheet" type="text/css" href="tailwind.css" />
+<html x-data="{ isRTL: false }">
+  <head>
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <link rel="stylesheet" type="text/css" href="ltr.css" x-bind:href="(isRTL ? 'rtl' : 'ltr') + '.css'" />
+  </head>
 
-<body>
+  <body x-bind:dir="isRTL ? 'rtl' : 'ltr'">
 
-  <div class="p-10 bg-base-100 text-base-content">
-    <button class="daisy-btn">button</button>
-    <button class="daisy-btn daisy-btn-primary">button</button>
-    <button class="daisy-btn daisy-btn-secondary">button</button>
-    <button class="daisy-btn daisy-btn-accent">button</button>
+    <button class="btn" @click="isRTL = !isRTL">switch direction</button>
 
-    <button class="btn">my custom button</button>
-  </div>
+    <div class="m-4 btn-group">
+      <button class="btn btn-active">one</button> 
+      <button class="btn">two</button> 
+      <button class="btn">three</button>
+    </div> 
+    <div class="m-4 tabs">
+      <button class="tab tab-lifted">Tab 1</button>
+      <button class="tab tab-lifted tab-active">Tab 2</button>
+      <button class="tab tab-lifted">Tab 3</button>
+    </div>
 
-</body>
+
+  </body>
 
 </html>
